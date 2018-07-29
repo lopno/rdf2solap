@@ -1,0 +1,136 @@
+﻿@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix virtrdf: <http://www.openlinksw.com/schemas/virtrdf#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix qb: <http://purl.org/linked-data/cube#>.
+@prefix qb4o: <http://purl.org/qb4solap/cubes#> .
+@prefix qb4so: <http://w3id.org/qb4solap#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix gfs: <http://qb4solap.org/cubes/schemas/geofarm#> .
+@prefix gfsi: <http://qb4solap.org/cubes/instances/geofarm#> . 
+gfsi:livestock_33 a gfs:livestock ;
+	 qb4o:memberOf gfs:livestock ;
+	 gfs:livestockId 33 ;
+	 gfs:livestockNameDA "Kalkuner" ;
+	 gfs:livestockNameEN "Turkey" ;
+	 skos:broader gfsi:herd_4.  
+gfsi:livestock_43 a gfs:livestock ;
+	 qb4o:memberOf gfs:livestock ;
+	 gfs:livestockId 43 ;
+	 gfs:livestockNameDA "Duer" ;
+	 gfs:livestockNameEN "Dove" ;
+	 skos:broader gfsi:herd_4.  
+gfsi:livestock_47 a gfs:livestock ;
+	 qb4o:memberOf gfs:livestock ;
+	 gfs:livestockId 47 ;
+	 gfs:livestockNameDA "Strudsefugle" ;
+	 gfs:livestockNameEN "Ostrich" ;
+	 skos:broader gfsi:herd_4.  
+gfsi:livestock_13 a gfs:livestock ;
+	 qb4o:memberOf gfs:livestock ;
+	 gfs:livestockId 13 ;
+	 gfs:livestockNameDA "Får" ;
+	 gfs:livestockNameEN "Sheep" ;
+	 skos:broader gfsi:herd_5.  
+gfsi:livestock_31 a gfs:livestock ;
+	 qb4o:memberOf gfs:livestock ;
+	 gfs:livestockId 31 ;
+	 gfs:livestockNameDA "Høns af æglægningstype" ;
+	 gfs:livestockNameEN "Chicken (egg laying breed)" ;
+	 skos:broader gfsi:herd_4.  
+gfsi:livestock_25 a gfs:livestock ;
+	 qb4o:memberOf gfs:livestock ;
+	 gfs:livestockId 25 ;
+	 gfs:livestockNameDA "Chinchilla" ;
+	 gfs:livestockNameEN "Chinchilla" ;
+	 skos:broader gfsi:herd_3.  
+gfsi:livestock_14 a gfs:livestock ;
+	 qb4o:memberOf gfs:livestock ;
+	 gfs:livestockId 14 ;
+	 gfs:livestockNameDA "Geder" ;
+	 gfs:livestockNameEN "Goat" ;
+	 skos:broader gfsi:herd_5.  
+gfsi:livestock_21 a gfs:livestock ;
+	 qb4o:memberOf gfs:livestock ;
+	 gfs:livestockId 21 ;
+	 gfs:livestockNameDA "Hjortedyr" ;
+	 gfs:livestockNameEN "Deer" ;
+	 skos:broader gfsi:herd_5.  
+gfsi:livestock_44 a gfs:livestock ;
+	 qb4o:memberOf gfs:livestock ;
+	 gfs:livestockId 44 ;
+	 gfs:livestockNameDA "Fasaner" ;
+	 gfs:livestockNameEN "Pheasant" ;
+	 skos:broader gfsi:herd_4.  
+gfsi:livestock_45 a gfs:livestock ;
+	 qb4o:memberOf gfs:livestock ;
+	 gfs:livestockId 45 ;
+	 gfs:livestockNameDA "Agerhøns" ;
+	 gfs:livestockNameEN "Partridge" ;
+	 skos:broader gfsi:herd_4.  
+gfsi:livestock_46 a gfs:livestock ;
+	 qb4o:memberOf gfs:livestock ;
+	 gfs:livestockId 46 ;
+	 gfs:livestockNameDA "Gråænder" ;
+	 gfs:livestockNameEN "Mallard" ;
+	 skos:broader gfsi:herd_4.  
+gfsi:livestock_24 a gfs:livestock ;
+	 qb4o:memberOf gfs:livestock ;
+	 gfs:livestockId 24 ;
+	 gfs:livestockNameDA "Mink" ;
+	 gfs:livestockNameEN "Mink" ;
+	 skos:broader gfsi:herd_3.  
+gfsi:livestock_15 a gfs:livestock ;
+	 qb4o:memberOf gfs:livestock ;
+	 gfs:livestockId 15 ;
+	 gfs:livestockNameDA "Svin" ;
+	 gfs:livestockNameEN "Pig" ;
+	 skos:broader gfsi:herd_1.  
+gfsi:livestock_12 a gfs:livestock ;
+	 qb4o:memberOf gfs:livestock ;
+	 gfs:livestockId 12 ;
+	 gfs:livestockNameDA "Kvæg" ;
+	 gfs:livestockNameEN "Cow" ;
+	 skos:broader gfsi:herd_2.  
+gfsi:livestock_23 a gfs:livestock ;
+	 qb4o:memberOf gfs:livestock ;
+	 gfs:livestockId 23 ;
+	 gfs:livestockNameDA "Ræve" ;
+	 gfs:livestockNameEN "Fox" ;
+	 skos:broader gfsi:herd_3.  
+gfsi:livestock_28 a gfs:livestock ;
+	 qb4o:memberOf gfs:livestock ;
+	 gfs:livestockId 28 ;
+	 gfs:livestockNameDA "Ildere" ;
+	 gfs:livestockNameEN "Ferret" ;
+	 skos:broader gfsi:herd_3.  
+gfsi:livestock_35 a gfs:livestock ;
+	 qb4o:memberOf gfs:livestock ;
+	 gfs:livestockId 35 ;
+	 gfs:livestockNameDA "Ænder" ;
+	 gfs:livestockNameEN "Duck" ;
+	 skos:broader gfsi:herd_4.  
+gfsi:livestock_48 a gfs:livestock ;
+	 qb4o:memberOf gfs:livestock ;
+	 gfs:livestockId 48 ;
+	 gfs:livestockNameDA "Rødhøns" ;
+	 gfs:livestockNameEN "Red-legged Partridge" ;
+	 skos:broader gfsi:herd_4.  
+gfsi:livestock_32 a gfs:livestock ;
+	 qb4o:memberOf gfs:livestock ;
+	 gfs:livestockId 32 ;
+	 gfs:livestockNameDA "Høns af slagtetype" ;
+	 gfs:livestockNameEN "Chicken (broiler type)" ;
+	 skos:broader gfsi:herd_4.  
+gfsi:livestock_42 a gfs:livestock ;
+	 qb4o:memberOf gfs:livestock ;
+	 gfs:livestockId 42 ;
+	 gfs:livestockNameDA "Vagtler" ;
+	 gfs:livestockNameEN "Quail" ;
+	 skos:broader gfsi:herd_4.  
+gfsi:livestock_34 a gfs:livestock ;
+	 qb4o:memberOf gfs:livestock ;
+	 gfs:livestockId 34 ;
+	 gfs:livestockNameDA "Gæs" ;
+	 gfs:livestockNameEN "Goose" ;
+	 skos:broader gfsi:herd_4.  
