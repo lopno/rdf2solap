@@ -1,6 +1,0 @@
-"TypeCode"|"LivestockType_DK"|"LivestockType_EN"
-1|"Svin"|"Swine"
-2|"Kvæg"|"Cattle"
-3|"Pelsdyr"|"Fur animals"
-4|"Fjerkræ"|"Poultry and feather animals"
-5|"Rest"|"Rest"
