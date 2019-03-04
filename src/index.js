@@ -103,10 +103,10 @@ const pathOr = require("ramda").pathOr;
 //
 // console.log(result);
 
-const drainageAreasJson = require("../data/drainages.json");
-const parishesJson = require("../data/parishes.json");
+const drainageAreasJson = require("../data2019/drainages.json");
+const parishesJson = require("../data2019/parishes.json");
 
-const parishToWaterMapping = require("../data/parishToWaterRelations.json");
+const parishToWaterMapping = require("../data2019/parishToWaterRelations.json");
 
 const groupPolygonsById = jsonData => {
   // Map into id and value
@@ -179,18 +179,28 @@ const getGeoRelations = relations =>
         groupedDrainageAreas
       ).map(parish => generateTurfGeoData(parish.value));
 
-      // There exists some parish polygon that overlaps with a parish polygon
+      const drainageAreaBoundingBox = turf.bboxPolygon(
+        turf.bbox(
+          turf.multiPolygon([
+            drainageAreas.map(drainageArea => turf.getCoords(drainageArea))
+          ])
+        )
+      );
+
+      // There exists some parish polygon that overlaps with a drainage area polygon
       const overlaps = parishes.some(parish =>
         drainageAreas.some(drainageArea => {
           return turf.booleanOverlap(parish, drainageArea);
         })
       );
 
-      // There exists some drainage area polygon for which all the drainage area polygons are within
-      const within = drainageAreas.some(drainageArea => {
-        parishes.every(parish => {
-          return turf.booleanWithin(parish, drainageArea);
-        });
+      // const contains = parishes.some(parish => {
+      //   return turf.booleanContains(parish, drainageAreaBoundingBox);
+      // });
+
+      // all parishes are withing the drainage area (simplified with bounding box here)
+      const within = parishes.every(parish => {
+        return turf.booleanWithin(parish, drainageAreaBoundingBox);
       });
 
       return { ...relation, overlaps, within };
@@ -220,9 +230,10 @@ console.log(
   mappedRelations.filter(relation => relation.overlaps === true).length
 );
 console.log(
-  "within",
+  "within bounding box",
   mappedRelations.filter(relation => relation.within === true).length
 );
+
 console.log("error", mappedRelations.filter(relation => relation.error).length);
 console.log("ok");
 
