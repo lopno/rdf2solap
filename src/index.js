@@ -106,24 +106,25 @@ const pathOr = require("ramda").pathOr;
 const parentLevelMembersJson = require("../data2019/drainages.json");
 const childLevelMembersJson = require("../data2019/parishes.json");
 
-const hierarchyStepsMapping = require("../data2019/parishToWaterRelations.json");
+const explicitRelations = require("../data2019/parishToWaterRelations.json");
 
-const groupPolygonsById = jsonData => {
+const groupSpatialAttributeValuesByLevelMemberId = jsonData => {
   // Map into id and value
-  const mappedParentLevels = jsonData.results.bindings.map(binding => ({
+  const mappedLevelMembers = jsonData.results.bindings.map(binding => ({
     id: binding.s.value,
     value: binding.o.value
   }));
 
-  // Filter out values that are not polygons
-  const filteredParentLevels = mappedParentLevels.filter(
-    area =>
-      area.value.startsWith("POLYGON") || area.value.startsWith("MULTIPOLYGON")
+  // Filter out values that are not points, lines, or polygons
+  const filteredLevelMembers = mappedLevelMembers.filter(levelMember =>
+    levelMember.value.startsWith("POINT") ||
+    levelMember.value.startsWith("LINE") ||
+    levelMember.value.startsWith("POLYGON")
   );
 
   const groupById = groupBy(parentLevel => parentLevel.id);
 
-  return groupById(filteredParentLevels);
+  return groupById(filteredLevelMembers);
 };
 
 const mapRelations = jsonData => {
@@ -155,6 +156,12 @@ const generatePolygonPoints = polyString => {
 
 const getSpatialValues = value => {
   const locationString = getLevelMemberAttributes(value);
+  if (value.startsWith("POINT")) {
+    return null; // TODO
+  }
+  if (value.startsWith("LINE")) {
+    return null; // TODO
+  }
   if (value.startsWith("POLYGON")) {
     const points = generatePolygonPoints(locationString);
     return turf.polygon([points]);
@@ -165,6 +172,51 @@ const getSpatialValues = value => {
     return turf.multiPolygon([polygons]);
   }
   return null;
+};
+
+const relateSpatialValues = (
+  childLevelSpatialValues,
+  parentLevelSpatialValues
+) => {
+  const parentLevelMultipolygonBoundingBox = turf.bboxPolygon(
+    turf.bbox(
+      turf.multiPolygon([
+        parentLevelSpatialValues.map(parentLevelSpatialValue =>
+          turf.getCoords(parentLevelSpatialValue)
+        )
+      ])
+    )
+  );
+
+  // TODO: Check the cases (Algorithm 2)
+
+  // all child Level Spatial Values are withing the drainage area (simplified with bounding box here)
+  const within = childLevelSpatialValues.every(childLevelSpatialValue => {
+    return turf.booleanWithin(
+      childLevelSpatialValue,
+      parentLevelMultipolygonBoundingBox
+    );
+  });
+
+  // There exists some child level spatial value that overlaps with a parent level spatial value
+  const overlaps = childLevelSpatialValues.some(childLevelSpatialValue =>
+    parentLevelSpatialValues.some(parentLevelSpatialValue => {
+      return turf.booleanOverlap(
+        childLevelSpatialValue,
+        parentLevelSpatialValue
+      );
+    })
+  );
+
+  // const contains = childLevelSpatialValues.some(childLevelSpatialValue => {
+  //   return turf.booleanContains(childLevelSpatialValue, parentLevelMultipolygonBoundingBox);
+  // });
+
+  return within
+    ? "http://w3id.org/qb4solap#within"
+    : overlaps
+      ? "http://w3id.org/qb4solap#overlaps"
+      : "http://www.w3.org/2004/02/skos/core#broader";
 };
 
 const detectSpatialHierarchySteps = (
@@ -185,39 +237,18 @@ const detectSpatialHierarchySteps = (
         parentLevelMembers
       ).map(parish => getSpatialValues(parish.value));
 
-      const parentLevelMultipolygonBoundingBox = turf.bboxPolygon(
-        turf.bbox(
-          turf.multiPolygon([
-            parentLevelSpatialValues.map(parentLevelSpatialValue =>
-              turf.getCoords(parentLevelSpatialValue)
-            )
-          ])
-        )
+      const topoRel = relateSpatialValues(
+        childLevelSpatialValues,
+        parentLevelSpatialValues
       );
 
-      // There exists some child level spatial value that overlaps with a parent level spatial value
-      const overlaps = childLevelSpatialValues.some(childLevelSpatialValue =>
-        parentLevelSpatialValues.some(parentLevelSpatialValue => {
-          return turf.booleanOverlap(
-            childLevelSpatialValue,
-            parentLevelSpatialValue
-          );
-        })
-      );
-
-      // const contains = childLevelSpatialValues.some(childLevelSpatialValue => {
-      //   return turf.booleanContains(childLevelSpatialValue, parentLevelMultipolygonBoundingBox);
-      // });
-
-      // all child Level Spatial Values are withing the drainage area (simplified with bounding box here)
-      const within = childLevelSpatialValues.every(childLevelSpatialValue => {
-        return turf.booleanWithin(
-          childLevelSpatialValue,
-          parentLevelMultipolygonBoundingBox
-        );
-      });
-
-      return { ...spatialAttributeValuePair, overlaps, within };
+      return {
+        ...spatialAttributeValuePair,
+        p: {
+          type: "uri",
+          value: topoRel
+        }
+      };
     } catch (e) {
       console.log(
         "error",
@@ -231,10 +262,14 @@ const detectSpatialHierarchySteps = (
     }
   });
 
-const groupedParentLevelMembers = groupPolygonsById(parentLevelMembersJson);
-const groupedChildLevelMembers = groupPolygonsById(childLevelMembersJson);
+const groupedParentLevelMembers = groupSpatialAttributeValuesByLevelMemberId(
+  parentLevelMembersJson
+);
+const groupedChildLevelMembers = groupSpatialAttributeValuesByLevelMemberId(
+  childLevelMembersJson
+);
 
-const hierarchySteps = mapRelations(hierarchyStepsMapping);
+const hierarchySteps = mapRelations(explicitRelations);
 
 const topologicalRelations = detectSpatialHierarchySteps(
   groupedParentLevelMembers,
@@ -245,16 +280,16 @@ const topologicalRelations = detectSpatialHierarchySteps(
 console.log("relations", hierarchySteps.length);
 console.log(
   "overlapping",
-  topologicalRelations.filter(relation => relation.overlaps === true).length
+  topologicalRelations.filter(relation => relation.overlaps === true).length // TODO: update these checks to new strucure
 );
 console.log(
   "within bounding box",
-  topologicalRelations.filter(relation => relation.within === true).length
+  topologicalRelations.filter(relation => relation.within === true).length // TODO: update these checks to new strucure
 );
 
 console.log(
   "error",
-  topologicalRelations.filter(relation => relation.error).length
+  topologicalRelations.filter(relation => relation.error).length // TODO: update these checks to new strucure
 );
 console.log("ok");
 
