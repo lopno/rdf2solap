@@ -259,5 +259,5 @@ console.log(
 console.log("ok");
 
 module.exports = {
-  generateTurfGeoData: getSpatialValues
+  getSpatialValues
 };
