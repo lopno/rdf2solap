@@ -103,38 +103,38 @@ const pathOr = require("ramda").pathOr;
 //
 // console.log(result);
 
-const drainageAreasJson = require("../data2019/drainages.json");
-const parishesJson = require("../data2019/parishes.json");
+const parentLevelMembersJson = require("../data2019/drainages.json");
+const childLevelMembersJson = require("../data2019/parishes.json");
 
-const parishToWaterMapping = require("../data2019/parishToWaterRelations.json");
+const hierarchyStepsMapping = require("../data2019/parishToWaterRelations.json");
 
 const groupPolygonsById = jsonData => {
   // Map into id and value
-  const mappedDrainageAreas = jsonData.results.bindings.map(binding => ({
+  const mappedParentLevels = jsonData.results.bindings.map(binding => ({
     id: binding.s.value,
     value: binding.o.value
   }));
 
   // Filter out values that are not polygons
-  const filteredDrainageAreas = mappedDrainageAreas.filter(
+  const filteredParentLevels = mappedParentLevels.filter(
     area =>
       area.value.startsWith("POLYGON") || area.value.startsWith("MULTIPOLYGON")
   );
 
-  const groupById = groupBy(drainageArea => drainageArea.id);
+  const groupById = groupBy(parentLevel => parentLevel.id);
 
-  return groupById(filteredDrainageAreas);
+  return groupById(filteredParentLevels);
 };
 
 const mapRelations = jsonData => {
   return jsonData.results.bindings.map(binding => ({
-    parishId: binding.s.value,
-    drainageAreaId: binding.o.value
+    childLevelMemberId: binding.s.value,
+    parentLevelMemberId: binding.o.value
   }));
 };
 
-const getLocationString = str =>
-  str.substring(str.indexOf("(") + 1, str.indexOf(")")); // TODO: lastIndexOf
+const getLevelMemberAttributes = val =>
+  val.substring(val.indexOf("(") + 1, val.indexOf(")"));
 
 const generatePolygonPoints = polyString => {
   const points = polyString
@@ -153,10 +153,10 @@ const generatePolygonPoints = polyString => {
   return points;
 };
 
-const generateTurfGeoData = value => {
-  const locationString = getLocationString(value);
+const getSpatialValues = value => {
+  const locationString = getLevelMemberAttributes(value);
   if (value.startsWith("POLYGON")) {
-    const points = generatePolygonPoints(locationString); // TODO: should give an array of rings
+    const points = generatePolygonPoints(locationString);
     return turf.polygon([points]);
   }
   if (value.startsWith("MULTIPOLYGON")) {
@@ -167,76 +167,97 @@ const generateTurfGeoData = value => {
   return null;
 };
 
-const getGeoRelations = relations =>
-  relations.map(relation => {
+const detectSpatialHierarchySteps = (
+  parentLevelMembers,
+  childLevelMembers,
+  hierarchySteps
+) =>
+  hierarchySteps.map(spatialAttributeValuePair => {
     try {
-      const parishes = pathOr([], [relation.parishId], groupedParishes).map(
-        parish => generateTurfGeoData(parish.value)
-      );
-      const drainageAreas = pathOr(
+      const childLevelSpatialValues = pathOr(
         [],
-        [relation.drainageAreaId],
-        groupedDrainageAreas
-      ).map(parish => generateTurfGeoData(parish.value));
+        [spatialAttributeValuePair.childLevelMemberId],
+        childLevelMembers
+      ).map(childLevelMember => getSpatialValues(childLevelMember.value));
+      const parentLevelSpatialValues = pathOr(
+        [],
+        [spatialAttributeValuePair.parentLevelMemberId],
+        parentLevelMembers
+      ).map(parish => getSpatialValues(parish.value));
 
-      const drainageAreaBoundingBox = turf.bboxPolygon(
+      const parentLevelMultipolygonBoundingBox = turf.bboxPolygon(
         turf.bbox(
           turf.multiPolygon([
-            drainageAreas.map(drainageArea => turf.getCoords(drainageArea))
+            parentLevelSpatialValues.map(parentLevelSpatialValue =>
+              turf.getCoords(parentLevelSpatialValue)
+            )
           ])
         )
       );
 
-      // There exists some parish polygon that overlaps with a drainage area polygon
-      const overlaps = parishes.some(parish =>
-        drainageAreas.some(drainageArea => {
-          return turf.booleanOverlap(parish, drainageArea);
+      // There exists some child level spatial value that overlaps with a parent level spatial value
+      const overlaps = childLevelSpatialValues.some(childLevelSpatialValue =>
+        parentLevelSpatialValues.some(parentLevelSpatialValue => {
+          return turf.booleanOverlap(
+            childLevelSpatialValue,
+            parentLevelSpatialValue
+          );
         })
       );
 
-      // const contains = parishes.some(parish => {
-      //   return turf.booleanContains(parish, drainageAreaBoundingBox);
+      // const contains = childLevelSpatialValues.some(childLevelSpatialValue => {
+      //   return turf.booleanContains(childLevelSpatialValue, parentLevelMultipolygonBoundingBox);
       // });
 
-      // all parishes are withing the drainage area (simplified with bounding box here)
-      const within = parishes.every(parish => {
-        return turf.booleanWithin(parish, drainageAreaBoundingBox);
+      // all child Level Spatial Values are withing the drainage area (simplified with bounding box here)
+      const within = childLevelSpatialValues.every(childLevelSpatialValue => {
+        return turf.booleanWithin(
+          childLevelSpatialValue,
+          parentLevelMultipolygonBoundingBox
+        );
       });
 
-      return { ...relation, overlaps, within };
+      return { ...spatialAttributeValuePair, overlaps, within };
     } catch (e) {
       console.log(
         "error",
         e.message,
-        "parishId: ",
-        relation.parishId,
-        ", drainageAreaId: ",
-        relation.drainageAreaId
+        "childLevelMemberId: ",
+        spatialAttributeValuePair.childLevelMemberId,
+        ", parentLevelMemberId: ",
+        spatialAttributeValuePair.parentLevelMemberId
       );
-      return { ...relation, error: e.message };
+      return { ...spatialAttributeValuePair, error: e.message };
     }
   });
 
-const groupedDrainageAreas = groupPolygonsById(drainageAreasJson);
-const groupedParishes = groupPolygonsById(parishesJson);
+const groupedParentLevelMembers = groupPolygonsById(parentLevelMembersJson);
+const groupedChildLevelMembers = groupPolygonsById(childLevelMembersJson);
 
-const parishToDrainageAreaRelations = mapRelations(parishToWaterMapping);
+const hierarchySteps = mapRelations(hierarchyStepsMapping);
 
-const mappedRelations = getGeoRelations(parishToDrainageAreaRelations);
+const topologicalRelations = detectSpatialHierarchySteps(
+  groupedParentLevelMembers,
+  groupedChildLevelMembers,
+  hierarchySteps
+);
 
-console.log("relations", parishToDrainageAreaRelations.length);
+console.log("relations", hierarchySteps.length);
 console.log(
   "overlapping",
-  mappedRelations.filter(relation => relation.overlaps === true).length
+  topologicalRelations.filter(relation => relation.overlaps === true).length
 );
 console.log(
   "within bounding box",
-  mappedRelations.filter(relation => relation.within === true).length
+  topologicalRelations.filter(relation => relation.within === true).length
 );
 
-console.log("error", mappedRelations.filter(relation => relation.error).length);
+console.log(
+  "error",
+  topologicalRelations.filter(relation => relation.error).length
+);
 console.log("ok");
 
 module.exports = {
-  generateTurfGeoData
+  generateTurfGeoData: getSpatialValues
 };
