@@ -108,6 +108,10 @@ const childLevelMembersJson = require("../data2019/parishes.json");
 
 const explicitRelations = require("../data2019/parishToWaterRelations.json");
 
+// TODO: remove these
+let globalWithin = 0;
+let globalOverlaps = 0;
+
 const groupSpatialAttributeValuesByLevelMemberId = jsonData => {
   // Map into id and value
   const mappedLevelMembers = jsonData.results.bindings.map(binding => ({
@@ -117,8 +121,8 @@ const groupSpatialAttributeValuesByLevelMemberId = jsonData => {
 
   // Filter out values that are not points, lines, or polygons
   const filteredLevelMembers = mappedLevelMembers.filter(levelMember =>
-    levelMember.value.startsWith("POINT") ||
-    levelMember.value.startsWith("LINE") ||
+    // levelMember.value.startsWith("POINT") ||
+    // levelMember.value.startsWith("LINE") ||
     levelMember.value.startsWith("POLYGON")
   );
 
@@ -157,10 +161,10 @@ const generatePolygonPoints = polyString => {
 const getSpatialValues = value => {
   const locationString = getLevelMemberAttributes(value);
   if (value.startsWith("POINT")) {
-    return null; // TODO
+    return turf.point(locationString.split(" "));
   }
   if (value.startsWith("LINE")) {
-    return null; // TODO
+    return null; // TODO: turf.lineString(values)
   }
   if (value.startsWith("POLYGON")) {
     const points = generatePolygonPoints(locationString);
@@ -174,49 +178,139 @@ const getSpatialValues = value => {
   return null;
 };
 
-const relateSpatialValues = (
-  childLevelSpatialValues,
-  parentLevelSpatialValues
-) => {
+const equals = (childLevelSpatialValues, parentLevelSpatialValues) =>
+  // all child level values are equal to all parent level values
+  childLevelSpatialValues.every(childLevelSpatialValue =>
+    parentLevelSpatialValues.every(parentLevelSpatialValue =>
+      turf.booleanEqual(childLevelSpatialValue, parentLevelSpatialValue)
+    )
+  );
+
+const intersects = (childLevelSpatialValues, parentLevelSpatialValues) =>
+  // all child level points are on a parent level line
+  childLevelSpatialValues.every(childLevelSpatialValue =>
+    parentLevelSpatialValues.some(parentLevelSpatialValue =>
+      turf.booleanPointOnLine(childLevelSpatialValue, parentLevelSpatialValue)
+    )
+  );
+
+const crosses = (childLevelSpatialValues, parentLevelSpatialValues) =>
+  // some child level values crosses some parent level value
+  childLevelSpatialValues.some(childLevelSpatialValue =>
+    parentLevelSpatialValues.some(parentLevelSpatialValue =>
+      turf.booleanCrosses(childLevelSpatialValue, parentLevelSpatialValue)
+    )
+  );
+
+const overlaps = (childLevelSpatialValues, parentLevelSpatialValues) =>
+  // some child level values overlap some parent level value
+  childLevelSpatialValues.some(childLevelSpatialValue =>
+    parentLevelSpatialValues.some(parentLevelSpatialValue =>
+      turf.booleanOverlap(childLevelSpatialValue, parentLevelSpatialValue)
+    )
+  );
+
+const within = (childLevelSpatialValues, parentLevelSpatialValues) => {
   const parentLevelMultipolygonBoundingBox = turf.bboxPolygon(
     turf.bbox(
       turf.multiPolygon([
         parentLevelSpatialValues.map(parentLevelSpatialValue =>
-          turf.getCoords(parentLevelSpatialValue)
+          pathOr([], [0], turf.getCoords(parentLevelSpatialValue))
         )
       ])
     )
   );
 
-  // TODO: Check the cases (Algorithm 2)
-
-  // all child Level Spatial Values are withing the drainage area (simplified with bounding box here)
-  const within = childLevelSpatialValues.every(childLevelSpatialValue => {
+  // all child level values are within the parent level polygon (simplified with bounding box to support multipolygons)
+  return childLevelSpatialValues.every(childLevelSpatialValue => {
     return turf.booleanWithin(
       childLevelSpatialValue,
       parentLevelMultipolygonBoundingBox
     );
   });
+};
 
-  // There exists some child level spatial value that overlaps with a parent level spatial value
-  const overlaps = childLevelSpatialValues.some(childLevelSpatialValue =>
-    parentLevelSpatialValues.some(parentLevelSpatialValue => {
-      return turf.booleanOverlap(
-        childLevelSpatialValue,
-        parentLevelSpatialValue
-      );
-    })
+const relateSpatialValues = (
+  childLevelSpatialValues,
+  parentLevelSpatialValues
+) => {
+  const childLevelGeoType = pathOr(
+    null,
+    [0, "geometry", "type"],
+    childLevelSpatialValues
+  );
+  const parentLevelGeoType = pathOr(
+    null,
+    [0, "geometry", "type"],
+    parentLevelSpatialValues
   );
 
-  // const contains = childLevelSpatialValues.some(childLevelSpatialValue => {
-  //   return turf.booleanContains(childLevelSpatialValue, parentLevelMultipolygonBoundingBox);
-  // });
+  if (childLevelGeoType === "Point" && parentLevelGeoType === "Point") {
+    if (equals(childLevelSpatialValues, parentLevelSpatialValues)) {
+      return "http://w3id.org/qb4solap#equals";
+    }
+  } else if (
+    childLevelGeoType === "Point" &&
+    parentLevelGeoType === "LineString"
+  ) {
+    if (intersects(childLevelSpatialValues, parentLevelSpatialValues)) {
+      return "http://www.w3.org/2004/02/skos/core#intersects";
+    }
+  } else if (
+    childLevelGeoType === "Point" &&
+    parentLevelGeoType === "Polygon"
+  ) {
+    if (within(childLevelSpatialValues, parentLevelSpatialValues)) {
+      return "http://w3id.org/qb4solap#within";
+    }
+    // TODO: pointOnFeature
+  } else if (
+    childLevelGeoType === "LineString" &&
+    parentLevelGeoType === "LineString"
+  ) {
+    if (crosses(childLevelSpatialValues, parentLevelSpatialValues)) {
+      return "http://w3id.org/qb4solap#intersects";
+    }
+    if (overlaps(childLevelSpatialValues, parentLevelSpatialValues)) {
+      return "http://w3id.org/qb4solap#overlaps";
+    }
+  } else if (
+    childLevelGeoType === "LineString" &&
+    parentLevelGeoType === "Polygon"
+  ) {
+    if (within(childLevelSpatialValues, parentLevelSpatialValues)) {
+      return "http://w3id.org/qb4solap#within";
+    }
+    if (crosses(childLevelSpatialValues, parentLevelSpatialValues)) {
+      return "http://w3id.org/qb4solap#overlaps";
+    }
+  } else if (
+    childLevelGeoType === "Polygon" &&
+    parentLevelGeoType === "Polygon"
+  ) {
+    const isWithin = within(childLevelSpatialValues, parentLevelSpatialValues);
+    const isOverlaps = overlaps(
+      childLevelSpatialValues,
+      parentLevelSpatialValues
+    );
 
-  return within
-    ? "http://w3id.org/qb4solap#within"
-    : overlaps
-      ? "http://w3id.org/qb4solap#overlaps"
-      : "http://www.w3.org/2004/02/skos/core#broader";
+    // TODO: remove these
+    if (isWithin) {
+      globalWithin++;
+    }
+
+    if (isOverlaps) {
+      globalOverlaps++;
+    }
+
+    if (isWithin) {
+      return "http://w3id.org/qb4solap#within";
+    }
+    if (isOverlaps) {
+      return "http://w3id.org/qb4solap#overlaps";
+    }
+  }
+  return "http://www.w3.org/2004/02/skos/core#broader";
 };
 
 const detectSpatialHierarchySteps = (
@@ -235,7 +329,7 @@ const detectSpatialHierarchySteps = (
         [],
         [spatialAttributeValuePair.parentLevelMemberId],
         parentLevelMembers
-      ).map(parish => getSpatialValues(parish.value));
+      ).map(parentLevelMember => getSpatialValues(parentLevelMember.value));
 
       const topoRel = relateSpatialValues(
         childLevelSpatialValues,
@@ -280,16 +374,39 @@ const topologicalRelations = detectSpatialHierarchySteps(
 console.log("relations", hierarchySteps.length);
 console.log(
   "overlapping",
-  topologicalRelations.filter(relation => relation.overlaps === true).length // TODO: update these checks to new strucure
+  topologicalRelations.filter(
+    relation =>
+      relation.p &&
+      relation.p.value &&
+      relation.p.value === "http://w3id.org/qb4solap#overlaps"
+  ).length
 );
 console.log(
   "within bounding box",
-  topologicalRelations.filter(relation => relation.within === true).length // TODO: update these checks to new strucure
+  topologicalRelations.filter(
+    relation =>
+      relation.p &&
+      relation.p.value &&
+      relation.p.value === "http://w3id.org/qb4solap#within"
+  ).length
 );
 
 console.log(
+  "some relation",
+  topologicalRelations.filter(
+    relation =>
+      relation.p &&
+      relation.p.value &&
+      relation.p.value !== "http://www.w3.org/2004/02/skos/core#broader"
+  ).length
+);
+
+console.log("global overlaps", globalOverlaps);
+console.log("global within", globalWithin);
+
+console.log(
   "error",
-  topologicalRelations.filter(relation => relation.error).length // TODO: update these checks to new strucure
+  topologicalRelations.filter(relation => relation.error).length
 );
 console.log("ok");
 
