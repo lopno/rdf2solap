@@ -263,7 +263,6 @@ const relateSpatialValues = (
     if (within(childLevelSpatialValues, parentLevelSpatialValues)) {
       return "http://w3id.org/qb4solap#within";
     }
-    // TODO: pointOnFeature
   } else if (
     childLevelGeoType === "LineString" &&
     parentLevelGeoType === "LineString"
@@ -293,16 +292,6 @@ const relateSpatialValues = (
       childLevelSpatialValues,
       parentLevelSpatialValues
     );
-
-    // TODO: remove these
-    if (isWithin) {
-      globalWithin++;
-    }
-
-    if (isOverlaps) {
-      globalOverlaps++;
-    }
-
     if (isWithin) {
       return "http://w3id.org/qb4solap#within";
     }
