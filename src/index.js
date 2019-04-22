@@ -316,18 +316,21 @@ const relateSpatialValues = (
 const detectSpatialHierarchySteps = (
   parentLevelMembers,
   childLevelMembers,
-  hierarchySteps
-) =>
-  hierarchySteps.map(spatialAttributeValuePair => {
-    try {
+  explicitRelations
+) => {
+  const spatialHierarchySteps = explicitRelations.results.bindings.map(
+    binding => {
+      const childLevelMemberId = binding.s.value;
+      const parentLevelMemberId = binding.o.value;
+
       const childLevelSpatialValues = pathOr(
         [],
-        [spatialAttributeValuePair.childLevelMemberId],
+        [childLevelMemberId],
         childLevelMembers
       ).map(childLevelMember => getSpatialValues(childLevelMember.value));
       const parentLevelSpatialValues = pathOr(
         [],
-        [spatialAttributeValuePair.parentLevelMemberId],
+        [parentLevelMemberId],
         parentLevelMembers
       ).map(parentLevelMember => getSpatialValues(parentLevelMember.value));
 
@@ -337,24 +340,23 @@ const detectSpatialHierarchySteps = (
       );
 
       return {
-        ...spatialAttributeValuePair,
+        ...binding,
         p: {
           type: "uri",
           value: topoRel
         }
       };
-    } catch (e) {
-      console.log(
-        "error",
-        e.message,
-        "childLevelMemberId: ",
-        spatialAttributeValuePair.childLevelMemberId,
-        ", parentLevelMemberId: ",
-        spatialAttributeValuePair.parentLevelMemberId
-      );
-      return { ...spatialAttributeValuePair, error: e.message };
     }
-  });
+  );
+
+  return {
+    ...explicitRelations,
+    results: {
+      ...explicitRelations.results,
+      bindings: spatialHierarchySteps
+    }
+  };
+};
 
 const groupedParentLevelMembers = groupSpatialAttributeValuesByLevelMemberId(
   parentLevelMembersJson
@@ -363,18 +365,16 @@ const groupedChildLevelMembers = groupSpatialAttributeValuesByLevelMemberId(
   childLevelMembersJson
 );
 
-const hierarchySteps = mapRelations(explicitRelations);
-
 const topologicalRelations = detectSpatialHierarchySteps(
   groupedParentLevelMembers,
   groupedChildLevelMembers,
-  hierarchySteps
+  explicitRelations
 );
 
-console.log("relations", hierarchySteps.length);
+console.log("relations", explicitRelations.results.bindings.length);
 console.log(
   "overlapping",
-  topologicalRelations.filter(
+  topologicalRelations.results.bindings.filter(
     relation =>
       relation.p &&
       relation.p.value &&
@@ -383,7 +383,7 @@ console.log(
 );
 console.log(
   "within bounding box",
-  topologicalRelations.filter(
+  topologicalRelations.results.bindings.filter(
     relation =>
       relation.p &&
       relation.p.value &&
@@ -393,7 +393,7 @@ console.log(
 
 console.log(
   "some relation",
-  topologicalRelations.filter(
+  topologicalRelations.results.bindings.filter(
     relation =>
       relation.p &&
       relation.p.value &&
@@ -403,12 +403,6 @@ console.log(
 
 console.log("global overlaps", globalOverlaps);
 console.log("global within", globalWithin);
-
-console.log(
-  "error",
-  topologicalRelations.filter(relation => relation.error).length
-);
-console.log("ok");
 
 module.exports = {
   getSpatialValues
