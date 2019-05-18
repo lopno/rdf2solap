@@ -118,7 +118,7 @@ const relateSpatialValues = (
     parentLevelGeoType === "LineString"
   ) {
     if (intersects(childLevelSpatialValues, parentLevelSpatialValues)) {
-      return "http://www.w3.org/2004/02/skos/core#intersects";
+      return "http://w3id.org/qb4solap#intersects";
     }
   } else if (
     childLevelGeoType === "Point" &&
