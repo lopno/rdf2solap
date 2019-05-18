@@ -163,7 +163,7 @@ const relateSpatialValues = (
       return "http://w3id.org/qb4solap#overlaps";
     }
   }
-  return "http://www.w3.org/2004/02/skos/core#broader";
+  return null;
 };
 
 module.exports = {
