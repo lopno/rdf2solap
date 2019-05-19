@@ -20,6 +20,6 @@ describe("Data", () => {
   it("parishes.json", () => {
     const parishesIdsCount = dataUtils.countDistinctIds(parishesJson);
 
-    expect(parishesIdsCount).toBe(2687);
+    expect(parishesIdsCount).toBe(2181);
   });
 });
