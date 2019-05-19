@@ -27,8 +27,8 @@ describe("detectSpatialHierarchySteps, farmsStates and parishes", () => {
     expect(Object.values(groupedChildLevelMembers).length).toBe(10000);
   });
 
-  it("should have 1741 parent level members", () => {
-    expect(Object.values(groupedParentLevelMembers).length).toBe(1741);
+  it("should have 2181 parent level members", () => {
+    expect(Object.values(groupedParentLevelMembers).length).toBe(2181);
   });
 
   it("should have 10000 mapped bindings", () => {
@@ -45,23 +45,23 @@ describe("detectSpatialHierarchySteps, farmsStates and parishes", () => {
     expect(overlapping).toBe(0);
   });
 
-  it("should find 1993 within bounding box relations", () => {
+  it("should find 2781 within bounding box relations", () => {
     const withinRelations = farmStatesParishesTopologicalRelations.results.bindings.filter(
       relation =>
         relation.p &&
         relation.p.value &&
         relation.p.value === "http://w3id.org/qb4solap#within"
     ).length;
-    expect(withinRelations).toBe(1993);
+    expect(withinRelations).toBe(2781);
   });
 
-  it("should find 1993 with some relation", () => {
+  it("should find 2781 with some relation", () => {
     const someRelation = farmStatesParishesTopologicalRelations.results.bindings.filter(
       relation =>
         relation.p &&
         relation.p.value &&
         relation.p.value !== "http://www.w3.org/2004/02/skos/core#broader"
     ).length;
-    expect(someRelation).toBe(1993);
+    expect(someRelation).toBe(2781);
   });
 });
