@@ -4829,6 +4829,20 @@
       {
         "s": {
           "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#geogprahy"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parish"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
           "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#address"
         },
         "p": {
