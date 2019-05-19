@@ -1,22 +1,20 @@
-
 const pathOr = require("ramda").pathOr;
 const groupBy = require("ramda").groupBy;
 const flatten = require("ramda").flatten;
 
 const utils = require("./utils");
 
-const groupSpatialAttributeValuesByLevelMemberId = jsonData => {
+// allowedTypes, array of values POINT, LINE, POLYGON
+const groupSpatialAttributeValuesByLevelMemberId = (jsonData, allowedTypes) => {
   // Map into id and value
   const mappedLevelMembers = jsonData.results.bindings.map(binding => ({
     id: binding.s.value,
     value: binding.o.value
   }));
 
-  // Filter out values that are not points, lines, or polygons
+  // Filter out values that are not in allowed types
   const filteredLevelMembers = mappedLevelMembers.filter(levelMember =>
-    // levelMember.value.startsWith("POINT") ||
-    // levelMember.value.startsWith("LINE") ||
-    levelMember.value.startsWith("POLYGON")
+    allowedTypes.some(allowedType => levelMember.value.startsWith(allowedType))
   );
 
   const groupById = groupBy(parentLevel => parentLevel.id);
