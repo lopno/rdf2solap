@@ -1,7 +1,3 @@
-const { geojsonType } = require("@turf/invariant");
-
-const turf = require("@turf/turf");
-
 const utils = require("./utils");
 
 describe("utils", () => {
