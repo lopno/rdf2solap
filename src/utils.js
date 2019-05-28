@@ -74,6 +74,18 @@ const overlaps = (childLevelSpatialValues, parentLevelSpatialValues) =>
     )
   );
 
+
+// Nuref: new within function (without bounding box) to re-check test cases farmStatesParishes.test.js and  farmStatesParishesExpensive.test.js)
+const pointWithin = (childLevelSpatialValues, parentLevelSpatialValues) =>
+    // some child level values overlap some parent level value
+    childLevelSpatialValues.every(childLevelSpatialValue =>
+        parentLevelSpatialValues.some(parentLevelSpatialValue =>
+            turf.booleanPointInPolygon(childLevelSpatialValue, parentLevelSpatialValue)
+        )
+    );
+
+
+
 const within = (childLevelSpatialValues, parentLevelSpatialValues) => {
   const parentLevelMultipolygonBoundingBox = turf.bboxPolygon(
     turf.bbox(
@@ -124,7 +136,11 @@ const relateSpatialValues = (
     childLevelGeoType === "Point" &&
     parentLevelGeoType === "Polygon"
   ) {
-    if (within(childLevelSpatialValues, parentLevelSpatialValues)) {
+    //if (within(childLevelSpatialValues, parentLevelSpatialValues)) {
+    //  return "http://w3id.org/qb4solap#within";
+    //}
+    // Nuref: commented above three lines to use pointWithin boolean function for point-polygon cases in farmStatesParishes.test.js and  farmStatesParishesExpensive.test.js
+    if (pointWithin(childLevelSpatialValues, parentLevelSpatialValues)) {
       return "http://w3id.org/qb4solap#within";
     }
   } else if (

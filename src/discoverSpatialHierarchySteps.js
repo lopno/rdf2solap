@@ -12,11 +12,17 @@ const discoverSpatialHierarchySteps = schema =>
           hierarchyBinding.o.value === binding.s.value &&
           binding.p.value === "http://purl.org/qb4olap/cubes#hasLevel"
       )
+          .map(levelBinding =>
+              schema.results.bindings.filter(
+                  binding =>
+                      levelBinding.o.value === binding.s.value &&
+                      binding.p.value === "http://purl.org/qb4olap/cubes#memberOf"
+              )
     );
 
-// const inDimension = schema.results.bindings.filter(
-//   binding => binding.p.value === "http://purl.org/qb4olap/cubes#inDimension"
-// );
+ const inDimension = schema.results.bindings.filter(
+   binding => binding.p.value === "http://purl.org/qb4olap/cubes#inDimension"
+ );
 
 module.exports = {
   wrapper: discoverSpatialHierarchySteps
