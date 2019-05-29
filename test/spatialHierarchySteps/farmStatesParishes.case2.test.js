@@ -1,4 +1,5 @@
 //Algorithm 5
+// This 2nd test case is created to find relations between farmstates & parishes  with the second within function pointWithin implemented with BooleanPointInPolygon turf.js function
 const parishesJson = require("../../data2019/parishes.json");
 const farmStatesJson = require("../../data2019/farmstates");
 
@@ -46,7 +47,7 @@ describe("detectSpatialHierarchySteps, farmsStates and parishes", () => {
     expect(overlapping).toBe(0);
   });
 
-  it("should find 2781 within bounding box relations", () => {
+  it("should find 2781 (??) within (bounding box) relations", () => {
     const withinRelations = farmStatesParishesTopologicalRelations.results.bindings.filter(
       relation =>
         relation.p &&

@@ -139,7 +139,7 @@ const relateSpatialValues = (
     //if (within(childLevelSpatialValues, parentLevelSpatialValues)) {
     //  return "http://w3id.org/qb4solap#within";
     //}
-    // Nuref: commented above three lines to use pointWithin boolean function for point-polygon cases in farmStatesParishes.test.js and  farmStatesParishesExpensive.test.js
+    // Nuref: commented above three lines to use pointWithin boolean function for point-polygon cases in farmStatesParishes.case2.test.js and  farmStatesParishesExpensive.case2.test.js
     if (pointWithin(childLevelSpatialValues, parentLevelSpatialValues)) {
       return "http://w3id.org/qb4solap#within";
     }
