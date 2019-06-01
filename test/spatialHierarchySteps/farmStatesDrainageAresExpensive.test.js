@@ -21,8 +21,8 @@ describe("detectSpatialHierarchyStepsExpensive, drainage areas and farm states",
     groupedChildLevelMembers
   );
 
-  it("should have 10000 child level members", () => {
-    expect(Object.values(groupedChildLevelMembers).length).toBe(10000);
+  it("should have 40039 child level members", () => {
+    expect(Object.values(groupedChildLevelMembers).length).toBe(40039);
   });
 
   it("should have 135 parent level members", () => {
@@ -39,23 +39,23 @@ describe("detectSpatialHierarchyStepsExpensive, drainage areas and farm states",
     expect(overlapping).toBe(0);
   });
 
-  it("should find 20815 within bounding box relations", () => {
+  it("should find 39845 within (without bounding box but with PointInPolygon) relations", () => {
     const withinRelations = topologicalRelations.results.bindings.filter(
       relation =>
         relation.p &&
         relation.p.value &&
         relation.p.value === "http://w3id.org/qb4solap#within"
     ).length;
-    expect(withinRelations).toBe(20815);
+    expect(withinRelations).toBe(39845);
   });
 
-  it("should find 20815 with some relation", () => {
+  it("should find 39845 with some relation", () => {
     const someRelation = topologicalRelations.results.bindings.filter(
       relation =>
         relation.p &&
         relation.p.value &&
         relation.p.value !== "http://www.w3.org/2004/02/skos/core#broader"
     ).length;
-    expect(someRelation).toBe(20815);
+    expect(someRelation).toBe(39845);
   });
 });

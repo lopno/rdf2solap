@@ -76,6 +76,7 @@ const overlaps = (childLevelSpatialValues, parentLevelSpatialValues) =>
 
 
 // Nuref: new within function (without bounding box) to re-check test cases farmStatesParishes.test.js and  farmStatesParishesExpensive.test.js)
+//This function only works when data types are POINT and POLYGON
 const pointWithin = (childLevelSpatialValues, parentLevelSpatialValues) =>
     // some child level values overlap some parent level value
     childLevelSpatialValues.every(childLevelSpatialValue =>
@@ -139,7 +140,8 @@ const relateSpatialValues = (
     //if (within(childLevelSpatialValues, parentLevelSpatialValues)) {
     //  return "http://w3id.org/qb4solap#within";
     //}
-    // Nuref: commented above three lines to use pointWithin boolean function for point-polygon cases in farmStatesParishes.case2.test.js and  farmStatesParishesExpensive.case2.test.js
+    // Nuref: commented above three lines to use pointWithin boolean function for point-polygon cases:
+      // in farmStatesParishes.case2.test.js and  farmStatesParishesExpensive.case2.test.js and farmStatesDrainageAreasExpensive.test.js
     if (pointWithin(childLevelSpatialValues, parentLevelSpatialValues)) {
       return "http://w3id.org/qb4solap#within";
     }

@@ -14,7 +14,7 @@ describe("Data", () => {
   it("farmstates.json", () => {
     const farmStatesIdsCount = dataUtils.countDistinctIds(farmStatesJson);
 
-    expect(farmStatesIdsCount).toBe(10000);
+    expect(farmStatesIdsCount).toBe(40039);
   });
 
   it("parishes.json", () => {
