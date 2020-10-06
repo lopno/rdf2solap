@@ -1,0 +1,5921 @@
+{
+  "head": { "link": [], "vars": ["s", "p", "o"] },
+  "results": {
+    "distinct": false,
+    "ordered": true,
+    "bindings": [
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farmDim"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farmLocation"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestockUnit"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#nitrateClass"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#nitrogenClass"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#nitrogenReductionPotential"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#numberOfAnimals"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#phosphorClass"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestockDim"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#purposeDim"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishDim"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#timeDim"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farmDim"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#DimensionProperty"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestockDim"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#DimensionProperty"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#purposeDim"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#DimensionProperty"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishDim"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#DimensionProperty"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#timeDim"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#DimensionProperty"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#GeoFarmHerdState"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#DataStructureDefinition"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farmLocation"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#MeasureProperty"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestockUnit"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#MeasureProperty"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#nitrateClass"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#MeasureProperty"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#nitrogenClass"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#MeasureProperty"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#nitrogenReductionPotential"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#MeasureProperty"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#numberOfAnimals"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#MeasureProperty"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#phosphorClass"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#MeasureProperty"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farmLocation"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.opengis.net/ont/geosparql#Geometry"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishGeometry"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.opengis.net/ont/geosparql#Geometry"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#waterGeometry"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.opengis.net/ont/geosparql#Geometry"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#address"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#Hierarchy"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#ownership"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#Hierarchy"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#herdHierarchy"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#Hierarchy"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#geogprahy"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#Hierarchy"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531802" },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#HierarchyStep"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531803" },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#HierarchyStep"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531804" },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#HierarchyStep"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531805" },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#HierarchyStep"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531806" },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#HierarchyStep"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531818" },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#HierarchyStep"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531819" },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#HierarchyStep"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531820" },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#HierarchyStep"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531821" },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#HierarchyStep"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531822" },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#HierarchyStep"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531823" },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#HierarchyStep"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531835" },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#HierarchyStep"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531836" },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#HierarchyStep"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531837" },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#HierarchyStep"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531838" },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#HierarchyStep"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531839" },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#HierarchyStep"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531840" },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#HierarchyStep"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531841" },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#HierarchyStep"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#chrNumber"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelAttribute"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farmLocation"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelAttribute"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestockUnit"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelAttribute"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#ownerIDcvr"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelAttribute"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#zipCode"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelAttribute"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#communeName"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelAttribute"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#communeNumber"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelAttribute"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#companyName"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelAttribute"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#cvrNumber"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelAttribute"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#herdCode"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelAttribute"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#herdTypeDA"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelAttribute"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#herdTypeEN"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelAttribute"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestockId"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelAttribute"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestockNameDA"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelAttribute"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestockNameEN"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelAttribute"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#postNr"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelAttribute"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#growthPeriod"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelAttribute"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#growthStaus"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelAttribute"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishArea"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelAttribute"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishCenter"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelAttribute"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishID"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelAttribute"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishName"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelAttribute"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishPerimeter"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelAttribute"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#purposeCode"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelAttribute"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#purposeTypeDA"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelAttribute"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#purposeTypeEN"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelAttribute"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#waterArea"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelAttribute"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#waterID"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelAttribute"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#waterName"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelAttribute"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#waterPerimeter"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelAttribute"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#year"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelAttribute"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelAttribute"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://www.w3.org/2003/01/geo/wgs84_pos#long"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelAttribute"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#commune"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelProperty"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#company"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelProperty"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farm"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelProperty"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestock"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelProperty"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parish"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelProperty"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#purpose"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelProperty"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#time"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelProperty"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#zipCode"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelProperty"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#herd"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelProperty"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#drainageArea"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#LevelProperty"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farmLocation"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/sdmx/2009/measure#obsValue"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestockUnit"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/sdmx/2009/measure#obsValue"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#nitrateClass"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/sdmx/2009/measure#obsValue"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#nitrogenClass"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/sdmx/2009/measure#obsValue"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#nitrogenReductionPotential"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/sdmx/2009/measure#obsValue"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#numberOfAnimals"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/sdmx/2009/measure#obsValue"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#phosphorClass"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/sdmx/2009/measure#obsValue"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishCenter"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.opengis.net/ont/geosparql#Geometry"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.opengis.net/ont/geosparql#Geometry"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://www.w3.org/2003/01/geo/wgs84_pos#long"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.opengis.net/ont/geosparql#Geometry"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#geogprahy"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Geography Hierarchy"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#zipCode"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "Postal Code" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#postNr"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "Postal Code" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#time"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "Time Level" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#year"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "Year Number" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#address"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Address Hierarchy"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#chrNumber"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "CHR Number" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#cvrNumber"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "CVR Number" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#commune"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "Commune Level" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#communeName"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "Commune Name" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#communeNumber"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "Commune Number" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#company"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "Company Level" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#companyName"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "Company Name" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#drainageArea"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Drainage Area Level"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farmDim"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "Farm Dimension" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farm"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "Farm Level" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#herdCode"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "Herd Code" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#herd"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "Herd Level" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#herdHierarchy"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Herd Type Hierarchy"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestockUnit"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "Livestock Unit" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#nitrateClass"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Nitrate Classification"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#nitrogenReductionPotential"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Nitrogen Reduction Potentials"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#ownership"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Ownership Hierarchy"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishArea"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "Parish Area" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishDim"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Parish Dimension"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishCenter"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "Parish Geometry" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishID"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "Parish ID" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parish"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "Parish Level" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishName"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "Parish Name" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farmLocation"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "Parish Polygon" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishGeometry"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "Parish Polygon" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#phosphorClass"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Phosphor Classification"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#purposeCode"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "Purpose Code" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#purpose"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "Purpose Level" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#timeDim"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "Time Dimension" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#waterArea"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "Water Area" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#waterID"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "Water ID" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#waterName"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "Water Name" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#waterGeometry"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "Water Polygon" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#zipCode"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "Zip Code Level" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#ownerIDcvr"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "CVR Number of the Owner company"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farmLocation"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "Farm Location" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#nitrogenClass"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Nitrogen Classification"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#numberOfAnimals"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Number of Animals"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#herdTypeEN"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "Herd Type Name" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#herdTypeDA"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "da", "value": "Herd Type Name" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestockId"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "Livestock Code" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestockDim"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Livestock Dimension"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestock"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "Livestock Level" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestockNameEN"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "Livestock Name" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestockNameDA"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "da", "value": "Livestock Name" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Location X Coordinate"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://www.w3.org/2003/01/geo/wgs84_pos#long"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Location Y Coordinate"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#purposeDim"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Purpose Dimension"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#growthPeriod"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "Growth period" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#growthStaus"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Growth status of the water"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishPerimeter"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Parish Perimeter"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#purposeTypeEN"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Purpose Type Name"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#purposeTypeDA"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": {
+          "type": "literal",
+          "xml:lang": "da",
+          "value": "Purpose Type Name"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#waterPerimeter"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "o": { "type": "literal", "xml:lang": "en", "value": "Water Perimeter" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farmLocation"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#domain"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.opengis.net/ont/geosparql#Polygon"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishGeometry"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#domain"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.opengis.net/ont/geosparql#MultiSurface"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#waterGeometry"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#domain"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.opengis.net/ont/geosparql#MultiSurface"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farmLocation"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#domain"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.opengis.net/ont/geosparql#Point"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishCenter"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#domain"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.opengis.net/ont/geosparql#Point"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#domain"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.opengis.net/ont/geosparql#Point"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://www.w3.org/2003/01/geo/wgs84_pos#long"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#domain"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.opengis.net/ont/geosparql#Point"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#nitrogenReductionPotential"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#decimal"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestockUnit"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#double"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishArea"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#double"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishPerimeter"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#double"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#waterArea"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#double"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#waterPerimeter"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#double"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestockUnit"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#float"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#float"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://www.w3.org/2003/01/geo/wgs84_pos#long"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#float"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#nitrateClass"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#integer"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#nitrogenClass"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#integer"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#numberOfAnimals"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#integer"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#phosphorClass"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#integer"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#chrNumber"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#positiveInteger"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#ownerIDcvr"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#positiveInteger"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#communeNumber"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#positiveInteger"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#cvrNumber"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#positiveInteger"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#herdCode"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#positiveInteger"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestockId"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#positiveInteger"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishID"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#positiveInteger"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#purposeCode"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#positiveInteger"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#waterID"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#positiveInteger"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#year"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#positiveInteger"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#zipCode"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#communeName"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#companyName"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#herdTypeDA"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#herdTypeEN"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestockNameDA"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestockNameEN"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#postNr"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#growthPeriod"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#growthStaus"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishName"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#purposeTypeDA"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#purposeTypeEN"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#waterName"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farmLocation"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.openlinksw.com/schemas/virtrdf#Geometry"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishCenter"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.openlinksw.com/schemas/virtrdf#Geometry"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishGeometry"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.openlinksw.com/schemas/virtrdf#Geometry"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#waterGeometry"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.openlinksw.com/schemas/virtrdf#Geometry"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farmLocation"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.opengis.net/ont/geosparql#wktLiteral"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishCenter"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.opengis.net/ont/geosparql#wktLiteral"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishGeometry"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.opengis.net/ont/geosparql#wktLiteral"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#waterGeometry"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#range"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.opengis.net/ont/geosparql#wktLiteral"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farmLocation"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#subClassOf"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.opengis.net/ont/geosparql#SpatialObject"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishCenter"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#subClassOf"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.opengis.net/ont/geosparql#SpatialObject"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishGeometry"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#subClassOf"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.opengis.net/ont/geosparql#SpatialObject"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#waterGeometry"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#subClassOf"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.opengis.net/ont/geosparql#SpatialObject"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#subClassOf"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.opengis.net/ont/geosparql#SpatialObject"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://www.w3.org/2003/01/geo/wgs84_pos#long"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.w3.org/2000/01/rdf-schema#subClassOf"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.opengis.net/ont/geosparql#SpatialObject"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#GeoFarmHerdState"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#component"
+        },
+        "o": { "type": "bnode", "value": "nodeID://b531791" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#GeoFarmHerdState"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#component"
+        },
+        "o": { "type": "bnode", "value": "nodeID://b531792" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#GeoFarmHerdState"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#component"
+        },
+        "o": { "type": "bnode", "value": "nodeID://b531793" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#GeoFarmHerdState"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#component"
+        },
+        "o": { "type": "bnode", "value": "nodeID://b531794" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#GeoFarmHerdState"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#component"
+        },
+        "o": { "type": "bnode", "value": "nodeID://b531795" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#GeoFarmHerdState"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#component"
+        },
+        "o": { "type": "bnode", "value": "nodeID://b531796" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#GeoFarmHerdState"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#component"
+        },
+        "o": { "type": "bnode", "value": "nodeID://b531797" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#GeoFarmHerdState"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#component"
+        },
+        "o": { "type": "bnode", "value": "nodeID://b531798" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#GeoFarmHerdState"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#component"
+        },
+        "o": { "type": "bnode", "value": "nodeID://b531799" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#GeoFarmHerdState"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#component"
+        },
+        "o": { "type": "bnode", "value": "nodeID://b531800" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#GeoFarmHerdState"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#component"
+        },
+        "o": { "type": "bnode", "value": "nodeID://b531801" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#GeoFarmHerdState"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#component"
+        },
+        "o": { "type": "bnode", "value": "nodeID://b531807" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#GeoFarmHerdState"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#component"
+        },
+        "o": { "type": "bnode", "value": "nodeID://b531808" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#GeoFarmHerdState"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#component"
+        },
+        "o": { "type": "bnode", "value": "nodeID://b531809" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#GeoFarmHerdState"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#component"
+        },
+        "o": { "type": "bnode", "value": "nodeID://b531810" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#GeoFarmHerdState"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#component"
+        },
+        "o": { "type": "bnode", "value": "nodeID://b531811" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#GeoFarmHerdState"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#component"
+        },
+        "o": { "type": "bnode", "value": "nodeID://b531812" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#GeoFarmHerdState"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#component"
+        },
+        "o": { "type": "bnode", "value": "nodeID://b531813" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#GeoFarmHerdState"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#component"
+        },
+        "o": { "type": "bnode", "value": "nodeID://b531814" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#GeoFarmHerdState"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#component"
+        },
+        "o": { "type": "bnode", "value": "nodeID://b531815" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#GeoFarmHerdState"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#component"
+        },
+        "o": { "type": "bnode", "value": "nodeID://b531816" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#GeoFarmHerdState"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#component"
+        },
+        "o": { "type": "bnode", "value": "nodeID://b531817" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#GeoFarmHerdState"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#component"
+        },
+        "o": { "type": "bnode", "value": "nodeID://b531824" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#GeoFarmHerdState"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#component"
+        },
+        "o": { "type": "bnode", "value": "nodeID://b531825" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#GeoFarmHerdState"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#component"
+        },
+        "o": { "type": "bnode", "value": "nodeID://b531826" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#GeoFarmHerdState"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#component"
+        },
+        "o": { "type": "bnode", "value": "nodeID://b531827" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#GeoFarmHerdState"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#component"
+        },
+        "o": { "type": "bnode", "value": "nodeID://b531828" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#GeoFarmHerdState"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#component"
+        },
+        "o": { "type": "bnode", "value": "nodeID://b531829" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#GeoFarmHerdState"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#component"
+        },
+        "o": { "type": "bnode", "value": "nodeID://b531830" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#GeoFarmHerdState"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#component"
+        },
+        "o": { "type": "bnode", "value": "nodeID://b531831" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#GeoFarmHerdState"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#component"
+        },
+        "o": { "type": "bnode", "value": "nodeID://b531832" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#GeoFarmHerdState"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#component"
+        },
+        "o": { "type": "bnode", "value": "nodeID://b531833" }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#GeoFarmHerdState"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#component"
+        },
+        "o": { "type": "bnode", "value": "nodeID://b531834" }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531797" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#measure"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestockUnit"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531813" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#measure"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestockUnit"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531830" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#measure"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestockUnit"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531800" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#measure"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#nitrateClass"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531816" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#measure"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#nitrateClass"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531833" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#measure"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#nitrateClass"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531798" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#measure"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#nitrogenClass"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531814" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#measure"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#nitrogenClass"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531831" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#measure"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#nitrogenClass"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531799" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#measure"
+        },
+        "o": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#nitrogenReductionPotential"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531815" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#measure"
+        },
+        "o": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#nitrogenReductionPotential"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531832" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#measure"
+        },
+        "o": {
+          "type": "uri",
+          "value":
+            "http://lod.cs.aau.dk/qb4olap/schema/geofarm#nitrogenReductionPotential"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531796" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#measure"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#numberOfAnimals"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531812" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#measure"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#numberOfAnimals"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531829" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#measure"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#numberOfAnimals"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531801" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#measure"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#phosphorClass"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531817" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#measure"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#phosphorClass"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531834" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/linked-data/cube#measure"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#phosphorClass"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531804" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#parentLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#commune"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531806" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#parentLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#commune"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531820" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#parentLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#commune"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531822" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#parentLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#commune"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531837" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#parentLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#commune"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531839" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#parentLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#commune"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531802" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#parentLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#company"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531818" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#parentLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#company"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531835" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#parentLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#company"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531803" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#parentLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#zipCode"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531805" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#parentLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#zipCode"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531819" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#parentLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#zipCode"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531821" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#parentLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#zipCode"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531836" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#parentLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#zipCode"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531838" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#parentLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#zipCode"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531823" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#parentLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#herd"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531840" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#parentLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#herd"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531841" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#parentLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#drainageArea"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531798" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#aggregateFunction"
+        },
+        "o": { "type": "uri", "value": "http://purl.org/qb4olap/cubes#Avg" }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531799" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#aggregateFunction"
+        },
+        "o": { "type": "uri", "value": "http://purl.org/qb4olap/cubes#Avg" }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531800" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#aggregateFunction"
+        },
+        "o": { "type": "uri", "value": "http://purl.org/qb4olap/cubes#Avg" }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531801" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#aggregateFunction"
+        },
+        "o": { "type": "uri", "value": "http://purl.org/qb4olap/cubes#Avg" }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531814" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#aggregateFunction"
+        },
+        "o": { "type": "uri", "value": "http://purl.org/qb4olap/cubes#Avg" }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531815" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#aggregateFunction"
+        },
+        "o": { "type": "uri", "value": "http://purl.org/qb4olap/cubes#Avg" }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531816" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#aggregateFunction"
+        },
+        "o": { "type": "uri", "value": "http://purl.org/qb4olap/cubes#Avg" }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531817" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#aggregateFunction"
+        },
+        "o": { "type": "uri", "value": "http://purl.org/qb4olap/cubes#Avg" }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531831" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#aggregateFunction"
+        },
+        "o": { "type": "uri", "value": "http://purl.org/qb4olap/cubes#Avg" }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531832" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#aggregateFunction"
+        },
+        "o": { "type": "uri", "value": "http://purl.org/qb4olap/cubes#Avg" }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531833" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#aggregateFunction"
+        },
+        "o": { "type": "uri", "value": "http://purl.org/qb4olap/cubes#Avg" }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531834" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#aggregateFunction"
+        },
+        "o": { "type": "uri", "value": "http://purl.org/qb4olap/cubes#Avg" }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531796" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#aggregateFunction"
+        },
+        "o": { "type": "uri", "value": "http://purl.org/qb4olap/cubes#Sum" }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531797" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#aggregateFunction"
+        },
+        "o": { "type": "uri", "value": "http://purl.org/qb4olap/cubes#Sum" }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531812" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#aggregateFunction"
+        },
+        "o": { "type": "uri", "value": "http://purl.org/qb4olap/cubes#Sum" }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531813" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#aggregateFunction"
+        },
+        "o": { "type": "uri", "value": "http://purl.org/qb4olap/cubes#Sum" }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531829" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#aggregateFunction"
+        },
+        "o": { "type": "uri", "value": "http://purl.org/qb4olap/cubes#Sum" }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531830" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#aggregateFunction"
+        },
+        "o": { "type": "uri", "value": "http://purl.org/qb4olap/cubes#Sum" }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531791" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#cardinality"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#ManyToOne"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531792" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#cardinality"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#ManyToOne"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531793" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#cardinality"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#ManyToOne"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531794" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#cardinality"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#ManyToOne"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531795" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#cardinality"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#ManyToOne"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531807" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#cardinality"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#ManyToOne"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531808" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#cardinality"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#ManyToOne"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531809" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#cardinality"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#ManyToOne"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531810" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#cardinality"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#ManyToOne"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531811" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#cardinality"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#ManyToOne"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531824" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#cardinality"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#ManyToOne"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531825" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#cardinality"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#ManyToOne"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531826" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#cardinality"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#ManyToOne"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531827" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#cardinality"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#ManyToOne"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531828" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#cardinality"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#ManyToOne"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531805" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#childLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#company"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531821" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#childLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#company"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531838" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#childLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#company"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531802" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#childLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farm"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531803" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#childLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farm"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531818" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#childLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farm"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531819" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#childLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farm"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531835" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#childLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farm"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531836" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#childLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farm"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531823" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#childLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestock"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531840" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#childLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestock"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531841" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#childLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parish"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531804" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#childLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#zipCode"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531806" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#childLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#zipCode"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531820" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#childLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#zipCode"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531822" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#childLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#zipCode"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531837" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#childLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#zipCode"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531839" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#childLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#zipCode"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farm"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasAttribute"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#chrNumber"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farm"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasAttribute"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farmLocation"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farm"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasAttribute"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestockUnit"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farm"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasAttribute"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#ownerIDcvr"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farm"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasAttribute"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#zipCode"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#commune"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasAttribute"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#communeName"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#commune"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasAttribute"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#communeNumber"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#company"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasAttribute"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#companyName"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#company"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasAttribute"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#cvrNumber"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#herd"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasAttribute"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#herdCode"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#herd"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasAttribute"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#herdTypeDA"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#herd"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasAttribute"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#herdTypeEN"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestock"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasAttribute"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestockId"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestock"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasAttribute"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestockNameDA"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestock"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasAttribute"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestockNameEN"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#zipCode"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasAttribute"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#postNr"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#drainageArea"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasAttribute"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#growthPeriod"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#drainageArea"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasAttribute"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#growthStaus"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parish"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasAttribute"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishArea"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parish"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasAttribute"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishCenter"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parish"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasAttribute"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishID"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parish"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasAttribute"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishName"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parish"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasAttribute"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishPerimeter"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#purpose"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasAttribute"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#purposeCode"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#purpose"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasAttribute"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#purposeNameDA"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#purpose"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasAttribute"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#purposeNameEN"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#drainageArea"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasAttribute"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#waterArea"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#drainageArea"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasAttribute"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#waterID"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#drainageArea"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasAttribute"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#waterName"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#drainageArea"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasAttribute"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#waterPerimeter"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#time"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasAttribute"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#year"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farmDim"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasHierarchy"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#address"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farmDim"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasHierarchy"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#ownership"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestockDim"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasHierarchy"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#herdHierarchy"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishDim"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasHierarchy"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#geography"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#address"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#commune"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#ownership"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#company"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#purposeDim"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#purpose"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#address"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#zipCode"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#herdHierarchy"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#herd"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#geogprahy"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#drainageArea"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#geogprahy"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#hasLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parish"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#address"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inDimension"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farmDim"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#ownership"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inDimension"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farmDim"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#herdHierarchy"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inDimension"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestockDim"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#geogprahy"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inDimension"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishDim"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531803" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inHierarchy"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#address"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531804" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inHierarchy"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#address"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531805" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inHierarchy"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#address"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531806" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inHierarchy"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#address"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531819" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inHierarchy"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#address"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531820" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inHierarchy"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#address"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531821" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inHierarchy"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#address"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531822" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inHierarchy"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#address"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531836" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inHierarchy"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#address"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531837" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inHierarchy"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#address"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531838" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inHierarchy"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#address"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531839" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inHierarchy"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#address"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531802" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inHierarchy"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#ownership"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531818" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inHierarchy"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#ownership"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531835" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inHierarchy"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#ownership"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531823" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inHierarchy"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#type"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531840" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inHierarchy"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#type"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531841" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inHierarchy"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#geography"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#communeName"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#commune"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#communeNumber"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#commune"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#companyName"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#company"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#cvrNumber"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#company"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#chrNumber"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farm"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestockUnit"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farm"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#ownerIDcvr"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farm"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#zipCode"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farm"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farm"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://www.w3.org/2003/01/geo/wgs84_pos#long"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farm"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestockId"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestock"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestockNameDA"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestock"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestockNameEN"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestock"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishArea"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parish"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishCenter"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parish"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishID"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parish"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishName"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parish"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishPerimeter"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parish"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#purposeCode"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#purpose"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#purposeTypeDA"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#purpose"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#purposeTypeEN"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#purpose"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#year"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#time"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#postNr"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#zipCode"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#herdCode"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#herd"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#herdTypeDA"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#herd"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#herdTypeEN"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#herd"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#growthPeriod"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#drainageArea"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#growthStaus"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#drainageArea"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#waterArea"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#drainageArea"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#waterID"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#drainageArea"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#waterName"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#drainageArea"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#waterPerimeter"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#inLevel"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#drainageArea"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531794" },
+        "p": { "type": "uri", "value": "http://purl.org/qb4olap/cubes#level" },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farm"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531810" },
+        "p": { "type": "uri", "value": "http://purl.org/qb4olap/cubes#level" },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farm"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531827" },
+        "p": { "type": "uri", "value": "http://purl.org/qb4olap/cubes#level" },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farm"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531791" },
+        "p": { "type": "uri", "value": "http://purl.org/qb4olap/cubes#level" },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestock"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531807" },
+        "p": { "type": "uri", "value": "http://purl.org/qb4olap/cubes#level" },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestock"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531824" },
+        "p": { "type": "uri", "value": "http://purl.org/qb4olap/cubes#level" },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#livestock"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531795" },
+        "p": { "type": "uri", "value": "http://purl.org/qb4olap/cubes#level" },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parish"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531811" },
+        "p": { "type": "uri", "value": "http://purl.org/qb4olap/cubes#level" },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parish"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531828" },
+        "p": { "type": "uri", "value": "http://purl.org/qb4olap/cubes#level" },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parish"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531792" },
+        "p": { "type": "uri", "value": "http://purl.org/qb4olap/cubes#level" },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#purpose"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531808" },
+        "p": { "type": "uri", "value": "http://purl.org/qb4olap/cubes#level" },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#purpose"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531825" },
+        "p": { "type": "uri", "value": "http://purl.org/qb4olap/cubes#level" },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#purpose"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531793" },
+        "p": { "type": "uri", "value": "http://purl.org/qb4olap/cubes#level" },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#time"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531809" },
+        "p": { "type": "uri", "value": "http://purl.org/qb4olap/cubes#level" },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#time"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531826" },
+        "p": { "type": "uri", "value": "http://purl.org/qb4olap/cubes#level" },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#time"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531841" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#pcCardinality"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#ManyToMany"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531802" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#pcCardinality"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#ManyToOne"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531803" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#pcCardinality"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#ManyToOne"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531804" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#pcCardinality"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#ManyToOne"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531805" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#pcCardinality"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#ManyToOne"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531806" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#pcCardinality"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#ManyToOne"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531818" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#pcCardinality"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#ManyToOne"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531819" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#pcCardinality"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#ManyToOne"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531820" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#pcCardinality"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#ManyToOne"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531821" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#pcCardinality"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#ManyToOne"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531822" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#pcCardinality"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#ManyToOne"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531823" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#pcCardinality"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#ManyToOne"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531835" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#pcCardinality"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#ManyToOne"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531836" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#pcCardinality"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#ManyToOne"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531837" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#pcCardinality"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#ManyToOne"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531838" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#pcCardinality"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#ManyToOne"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531839" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#pcCardinality"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#ManyToOne"
+        }
+      },
+      {
+        "s": { "type": "bnode", "value": "nodeID://b531840" },
+        "p": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#pcCardinality"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://purl.org/qb4olap/cubes#ManyToOne"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parish"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.opengis.net/ont/geosparql#hasGeometry"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#parishGeometry"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#drainageArea"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.opengis.net/ont/geosparql#hasGeometry"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#waterGeometry"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farm"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.opengis.net/ont/geosparql#hasGeometry"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2003/01/geo/wgs84_pos#lat"
+        }
+      },
+      {
+        "s": {
+          "type": "uri",
+          "value": "http://lod.cs.aau.dk/qb4olap/schema/geofarm#farm"
+        },
+        "p": {
+          "type": "uri",
+          "value": "http://www.opengis.net/ont/geosparql#hasGeometry"
+        },
+        "o": {
+          "type": "uri",
+          "value": "http://www.w3.org/2003/01/geo/wgs84_pos#long"
+        }
+      }
+    ]
+  }
+}
